@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="avancar">Avançar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="voltar">Voltar</string>
+    <string name="signup">Criar Conta</string>
+    <string name="sign_up">CRIAR CONTA</string>
+    <string name="agenda">Agenda</string>
+    <string name="log_in">CONECTAR</string>
+    <string name="terms">Concordo com os termos de uso.</string>
+    <string name="password">Senha</string>
+    <string name="phone">Celular</string>
+    <string name="what_to_do">O que fazer hoje?</string>
+    <string name="go_to_calendar">Ir para o calendário</string>
+</resources>
