@@ -14,15 +14,12 @@ tools:context=".HomeActivity">
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="99dp"
-            android:layout_marginBottom="100dp"
-            android:text="@string/agenda"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="40sp" />
+            android:layout_height="148dp"
+            android:layout_marginBottom="90dp"
+            app:srcCompat="@drawable/icons_schedule" />
 
         <EditText
             android:id="@+id/editText"
@@ -30,17 +27,19 @@ tools:context=".HomeActivity">
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/ic_action_mail"
             android:text="Email (laura@agenda.com)"
             android:textAlignment="center"
             android:textColor="#fff" />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="267dp"
+            android:layout_width="266dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             android:ems="10"
             android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_action_password"
             android:text="@string/password"
             android:textAlignment="center"
             android:textColor="#fff" />
