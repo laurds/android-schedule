@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="84dp"
+            android:layout_height="55dp"
             android:text="@string/signup"
             android:textAlignment="center"
             android:textColor="#fff"
@@ -25,10 +25,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="170dp"
-            android:layout_height="173dp"
-            tools:srcCompat="@tools:sample/avatars"
-            android:contentDescription="TODO" />
+            android:layout_width="213dp"
+            android:layout_height="156dp"
+            app:srcCompat="@drawable/user" />
 
         <EditText
             android:id="@+id/editText"
@@ -92,14 +91,14 @@
             android:text="@string/confirmar" />
 
         <Button
-                android:id="@+id/button6"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/voltar"
-                android:background="@drawable/rounded_button"
-                android:onClick="changeScreen"/>
+            android:id="@+id/button6"
+            android:layout_width="250dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="changeScreen"
+            android:text="@string/voltar" />
 
 
-        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

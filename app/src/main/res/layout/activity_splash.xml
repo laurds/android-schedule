@@ -9,18 +9,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:background="@drawable/gradient_background"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="400dp"
-            android:layout_height="216dp"
+            android:id="@+id/imageView3"
+            android:layout_width="321dp"
+            android:layout_height="218dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/icons_schedule" />
+            app:srcCompat="@drawable/ic_calendar" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
