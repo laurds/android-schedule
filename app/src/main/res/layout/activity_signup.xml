@@ -20,7 +20,7 @@
             android:layout_height="55dp"
             android:text="@string/signup"
             android:textAlignment="center"
-            android:textColor="#fff"
+            android:textColor="@color/white"
             android:textSize="30dp" />
 
         <ImageView
@@ -37,7 +37,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:drawableLeft="@drawable/ic_action_user"
-            android:text="Name (Laura)"
+            android:hint="Name (Laura)"
             android:textAlignment="center"
             android:textColor="#fff" />
 
@@ -48,7 +48,7 @@
             android:ems="10"
             android:inputType="textEmailAddress"
             android:drawableLeft="@drawable/ic_action_mail"
-            android:text="Email (laura@agenda.com)"
+            android:hint="Email (laura@agenda.com)"
             android:textAlignment="center"
             android:textColor="#fff" />
 
@@ -59,7 +59,7 @@
             android:ems="10"
             android:drawableLeft="@drawable/ic_action_password"
             android:inputType="textPassword"
-            android:text="@string/password"
+            android:hint="@string/password"
             android:textAlignment="center"
             android:textColor="#fff" />
 
@@ -70,7 +70,7 @@
             android:drawableLeft="@drawable/ic_action_phone"
             android:ems="10"
             android:inputType="phone"
-            android:text="@string/phone"
+            android:hint="@string/phone"
             android:textAlignment="center"
             android:textColor="#fff" />
 

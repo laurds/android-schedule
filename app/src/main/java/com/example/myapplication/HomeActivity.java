@@ -13,9 +13,15 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
-    public void changeScreen(View view) {
+    public void changeScreenLogin(View view) {
 
         Intent nextActivity = new Intent(HomeActivity.this, SignUpActivity.class);
+        startActivity(nextActivity);
+    }
+
+    public void changeScreenEvent(View view) {
+
+        Intent nextActivity = new Intent(HomeActivity.this, EventActivity.class);
         startActivity(nextActivity);
     }
 }
