@@ -63,17 +63,6 @@
             android:textAlignment="center"
             android:textColor="#fff" />
 
-        <EditText
-            android:id="@+id/phoneUser"
-            android:layout_width="266dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_phone"
-            android:ems="10"
-            android:inputType="phone"
-            android:hint="@string/phone"
-            android:textAlignment="center"
-            android:textColor="#fff" />
-
         <CheckBox
             android:id="@+id/checkBox"
             android:layout_width="266dp"
@@ -84,7 +73,7 @@
             android:textColor="#fff" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/bntCreateUser"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_button"

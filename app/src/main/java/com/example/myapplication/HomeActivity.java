@@ -63,6 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(nextActivity);
     }
 
+    //Conecta com o firebase e faz a autenticação do usuário
     private void loginUser(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -72,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(getApplicationContext(), "Login Ok!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Bem-Vindo!", Toast.LENGTH_SHORT).show();
 
                             Intent nextActivity = new Intent(HomeActivity.this, EventActivity.class);
                             startActivity(nextActivity);

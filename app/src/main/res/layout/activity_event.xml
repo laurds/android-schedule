@@ -37,7 +37,7 @@
 
         <LinearLayout
             android:id="@+id/eventContent"
-            android:layout_width="400dp"
+            android:layout_width="371dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/rounded_event"
@@ -48,8 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnGoCalendar"
-                android:layout_marginLeft="30dp"
                 android:layout_marginTop="30dp"
+                android:textAlignment="center"
                 android:hint="Titulo"
                 android:textSize="25dp" />
 
@@ -57,14 +57,16 @@
                 android:id="@+id/notesEventView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Notas"
-                android:layout_marginLeft="30dp" />
+                android:layout_marginLeft="30dp"
+                android:hint="Notas" />
 
             <TextView
                 android:id="@+id/timeEventView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/time_icon"
                 android:layout_marginLeft="30dp"
+                android:drawablePadding="@dimen/cardview_compat_inset_shadow"
                 android:hint="13:00" />
 
             <TextView
@@ -72,8 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnGoCalendar"
+                android:layout_marginLeft="30dp"
                 android:hint="Data"
-                android:textAlignment="center"
                 android:textSize="20dp" />
 
         </LinearLayout>
