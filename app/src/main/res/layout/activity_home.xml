@@ -21,18 +21,18 @@ tools:context=".HomeActivity">
             app:srcCompat="@drawable/ic_calendar" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/mail"
             android:layout_width="266dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:drawableLeft="@drawable/ic_action_mail"
-            android:hint="Email (laura@agenda.com)"
+            android:hint="laura@agenda.com"
             android:textAlignment="center"
             android:textColor="#fff" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/password"
             android:layout_width="266dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
@@ -44,12 +44,11 @@ tools:context=".HomeActivity">
             android:textColor="#fff" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnLogin"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_button"
-            android:onClick="changeScreenEvent"
             android:text="@string/log_in" />
 
         <Button

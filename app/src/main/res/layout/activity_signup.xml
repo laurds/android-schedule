@@ -30,30 +30,30 @@
             app:srcCompat="@drawable/user" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/nameUser"
             android:layout_width="266dp"
             android:layout_height="46dp"
             android:layout_marginTop="20dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:drawableLeft="@drawable/ic_action_user"
-            android:hint="Name (Laura)"
+            android:hint="Seu Nome"
             android:textAlignment="center"
             android:textColor="#fff" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/mailUser"
             android:layout_width="266dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:drawableLeft="@drawable/ic_action_mail"
-            android:hint="Email (laura@agenda.com)"
+            android:hint="Seu E-mail"
             android:textAlignment="center"
             android:textColor="#fff" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/passwordUser"
             android:layout_width="266dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -64,7 +64,7 @@
             android:textColor="#fff" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/phoneUser"
             android:layout_width="266dp"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_action_phone"
@@ -96,7 +96,7 @@
             android:layout_height="49dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_button"
-            android:onClick="changeScreen"
+            android:onClick="backScreen"
             android:text="@string/voltar" />
 
 

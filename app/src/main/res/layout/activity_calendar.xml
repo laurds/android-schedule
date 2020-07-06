@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:textSize="18dp"
             android:layout_marginLeft="5dp"
-            android:text="O que você precisa fazer?"
+            android:text="Qual o título do compromisso?"
             android:textColor="@color/white" />
 
         <EditText
@@ -46,11 +46,11 @@
         <EditText
             android:id="@+id/notesEvent"
             android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_height="64dp"
             android:layout_marginLeft="5dp"
             android:background="@drawable/rounded_field"
             android:hint="@string/example_notes_event"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:maxLines="1"
             android:paddingLeft="10dp"
             android:textSize="15dp" />
@@ -99,6 +99,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded_button"
+            android:onClick="backScreen"
             android:text="@string/voltar" />
 
     </LinearLayout>

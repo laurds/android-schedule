@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "157009659993",
+    "firebase_url": "https://schedule-edc73.firebaseio.com",
+    "project_id": "schedule-edc73",
+    "storage_bucket": "schedule-edc73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157009659993:android:a30a1f8d302a0083f40948",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157009659993-1i3brjofqpn24b2s38ugrodi3g9bjk8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "aeb49c08df84042a3c75455206096f3fc3edea33"
+          }
+        },
+        {
+          "client_id": "157009659993-6m3e108nekbo4apdterj17n8e8rujckh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtZM0ErhIBoq4I7uhYMBfICan8wGI3m6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157009659993-6m3e108nekbo4apdterj17n8e8rujckh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

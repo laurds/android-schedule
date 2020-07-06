@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient_background"
-        android:gravity="center"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="-341dp">
@@ -29,30 +28,56 @@
             android:id="@+id/btnGoCalendar"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/rounded_button"
             android:text="@string/go_to_calendar" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <ScrollView
+        <LinearLayout
+            android:id="@+id/eventContent"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_event"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleEventView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnGoCalendar"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:hint="Titulo"
+                android:textSize="25dp" />
 
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/btnGoCalendar"
-                    android:layout_marginTop="30dp"
-                    android:hint="Data"
-                    android:textAlignment="center"
-                    android:textSize="25dp" />
-            </ScrollView>
+            <TextView
+                android:id="@+id/notesEventView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Notas"
+                android:layout_marginLeft="30dp" />
 
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/timeEventView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:hint="13:00" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnGoCalendar"
+                android:hint="Data"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

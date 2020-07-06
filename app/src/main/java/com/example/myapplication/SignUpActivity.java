@@ -14,8 +14,8 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
     }
 
-    public void changeScreen(View view) {
-
+    //Método para voltar para tela de login(home)
+    public void backScreen(View view) {
         Intent nextActivity = new Intent(SignUpActivity.this, HomeActivity.class);
         startActivity(nextActivity);
     }
