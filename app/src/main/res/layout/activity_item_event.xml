@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemEventActivity">
+
+    <LinearLayout
+        android:id="@+id/eventContent"
+        android:layout_width="371dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_event"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <Button
+            android:id="@+id/btnRemove"
+            android:layout_width="27dp"
+            android:layout_height="29dp"
+            android:background="@drawable/ic_close"
+            android:layout_gravity="right"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/titleEventView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnGoCalendar"
+            android:layout_marginTop="30dp"
+            android:hint="Titulo"
+            android:textAlignment="center"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/notesEventView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:hint="Notas" />
+
+        <TextView
+            android:id="@+id/timeEventView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@drawable/time_icon"
+            android:drawablePadding="@dimen/cardview_compat_inset_shadow"
+            android:hint="13:00" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnGoCalendar"
+            android:layout_marginLeft="30dp"
+            android:hint="Data"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveItem"
+        android:text="Button"
+        app:layout_constraintTop_toBottomOf="@+id/eventContent"
+        tools:layout_editor_absoluteX="150dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

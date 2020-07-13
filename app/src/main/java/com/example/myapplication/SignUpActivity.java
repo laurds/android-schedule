@@ -21,6 +21,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private EditText mailUser;
     private EditText passwordUser;
+    private EditText nameUser;
     private Button btnCreateUser;
     private FirebaseAuth mAuth;
 
@@ -30,6 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         mAuth = FirebaseAuth.getInstance();
 
+        nameUser = (EditText) findViewById(R.id.nameUser);
         mailUser = (EditText) findViewById(R.id.mailUser);
         passwordUser = (EditText) findViewById(R.id.passwordUser);
         btnCreateUser = (Button) findViewById(R.id.bntCreateUser);
@@ -68,6 +70,7 @@ public class SignUpActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Conta criada com sucesso!", Toast.LENGTH_SHORT).show();
 
                             Intent nextActivity = new Intent(getApplicationContext(), HomeActivity.class);
+                            nextActivity.putExtra("nameUser", nameUser.getText().toString());
                             startActivity(nextActivity);
 
                         } else {

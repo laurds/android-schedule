@@ -11,15 +11,17 @@ import android.widget.CalendarView;
 import android.widget.EditText;
 
 import java.sql.Time;
-
+/**Activity que representa a criação de uma nota, evento.*/
 public class CalendarActivity extends AppCompatActivity {
 
     private static final String TAG = "CalendarActivity";
 
+    //Campos que recebem os dados do usuário
     private CalendarView myCalendarView;
     private EditText eventTitle;
     private EditText eventNotes;
     private EditText eventTime;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class CalendarActivity extends AppCompatActivity {
         eventTitle = (EditText) findViewById(R.id.nameEvent);
         eventNotes = (EditText) findViewById(R.id.notesEvent);
         eventTime = (EditText) findViewById(R.id.timeEvent);
+
 
         //Seta a data no calendário da view
         myCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -42,16 +45,14 @@ public class CalendarActivity extends AppCompatActivity {
 
                 Log.d(TAG, "onSelectedDayChange: date" + date);
 
+                Item item = new Item(title, notes, time, date);
+
+
                 //Manda para a outra activity os dados
-                Intent intent = new Intent(CalendarActivity.this, EventActivity.class);
-                intent.putExtra("date", date);
-                intent.putExtra("titleEvent", title);
-                intent.putExtra("notesEvent", notes);
-                intent.putExtra("timeEvent", time);
-                intent.putExtra("view", View.VISIBLE);
+                Intent intent = new Intent(CalendarActivity.this, ItemEventActivity.class);
+                intent.putExtra("Item", item);
                 startActivity(intent);
             }
-
         });
     }
 

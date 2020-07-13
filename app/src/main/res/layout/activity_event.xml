@@ -11,12 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient_background"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="-341dp">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/titleScreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/what_to_do"
@@ -34,52 +32,22 @@
             android:background="@drawable/rounded_button"
             android:text="@string/go_to_calendar" />
 
-
         <LinearLayout
-            android:id="@+id/eventContent"
+            android:id="@+id/layoutList"
             android:layout_width="371dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@drawable/rounded_event"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/titleEventView"
+            <ListView
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnGoCalendar"
-                android:layout_marginTop="30dp"
-                android:textAlignment="center"
-                android:hint="Titulo"
-                android:textSize="25dp" />
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/notesEventView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:hint="Notas" />
 
-            <TextView
-                android:id="@+id/timeEventView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/time_icon"
-                android:layout_marginLeft="30dp"
-                android:drawablePadding="@dimen/cardview_compat_inset_shadow"
-                android:hint="13:00" />
-
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnGoCalendar"
-                android:layout_marginLeft="30dp"
-                android:hint="Data"
-                android:textSize="20dp" />
+            </ListView>
 
         </LinearLayout>
-
 
     </LinearLayout>
 

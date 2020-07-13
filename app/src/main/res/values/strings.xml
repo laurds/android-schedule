@@ -10,7 +10,7 @@
     <string name="terms">Concordo com os termos de uso.</string>
     <string name="password">Senha</string>
     <string name="phone">Celular</string>
-    <string name="what_to_do">O que fazer hoje?</string>
-    <string name="go_to_calendar">Ir para o calendário</string>
+    <string name="what_to_do">Olá! O que fazer hoje?</string>
+    <string name="go_to_calendar">Marcar um Compromisso</string>
     <string name="example_notes_event">Exemplo: Local aonde irá ocorrer ou detalhes do compromisso</string>
 </resources>
