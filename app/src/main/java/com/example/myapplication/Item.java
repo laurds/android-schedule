@@ -19,19 +19,19 @@ public class Item implements Serializable {
                 data + System.getProperty("line.separator");
     }
 
+    public Item(String title, String nota, String hora, String data) {
+        this.title = title;
+        this.nota = nota;
+        this.hora = hora;
+        this.data = data;
+    }
+
     public String getHora() {
         return hora;
     }
 
     public void setHora(String hora){
         this.hora = hora;
-    }
-
-    public Item(String title, String nota, String hora, String data) {
-        this.title = title;
-        this.nota = nota;
-        this.hora = hora;
-        this.data = data;
     }
 
     public String getNota() {

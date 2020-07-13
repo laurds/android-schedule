@@ -45,7 +45,8 @@ public class EventActivity extends AppCompatActivity {
             listaItem.add(item);
 
             //Guardar no cache
-            ArrayAdapter<Item> adapter = new ArrayAdapter<Item>(this, android.R.layout.simple_list_item_1, listaItem);
+            //ArrayAdapter<Item> adapter = new ArrayAdapter<Item>(this, android.R.layout.simple_list_item_1, listaItem);
+            MyAdapter adapter = new MyAdapter(listaItem, this);
             listView.setAdapter(adapter);
         }
 

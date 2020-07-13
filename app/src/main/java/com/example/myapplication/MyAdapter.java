@@ -1,10 +1,12 @@
 package com.example.myapplication;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -17,38 +19,57 @@ import java.util.ArrayList;
 
 import static com.example.myapplication.R.layout.activity_item_event;
 
-public class MyAdapter  extends ArrayAdapter<Item> {
+public class MyAdapter  extends BaseAdapter {
 
     private Context context;
     private ArrayList<Item> lista;
+    private Activity act;
 
 
-    public MyAdapter(Context context,  ArrayList<Item> lista) {
-        super(context, activity_item_event, R.id.titleEventView, lista);
-        this.context = context;
+    public MyAdapter(ArrayList<Item> lista, Activity act) {
+        this.lista = lista;
+        this.act = act;
     }
 
+
+    @Override
+    public int getCount() {
+        return lista.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return lista.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Item itemPosicao = this.lista.get(position);
         final int pos = position;
 
-        LayoutInflater layoutInflater = (LayoutInflater) context.getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View row = layoutInflater.inflate(activity_item_event, parent, false);
 
-        TextView myTitle = row.findViewById(R.id.titleEventView);
-        TextView myNotes = row.findViewById(R.id.notesEventView);
-        TextView myTime = row.findViewById(R.id.timeEventView);
-        TextView myDate = row.findViewById(R.id.date);
-        Button btnRemove = row.findViewById(R.id.btnRemove);
+        View view = act.getLayoutInflater().inflate(activity_item_event, parent, false);
+        Item itemPosicao = lista.get(position);
 
-        myTitle.setText(itemPosicao.title);
-        myNotes.setText(itemPosicao.nota);
-        myTime.setText(itemPosicao.hora);
-        myDate.setText(itemPosicao.data);
+        //LayoutInflater layoutInflater = (LayoutInflater) context.getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        return row;
+
+        TextView myTitle = (TextView) view.findViewById(R.id.titleEventView);
+        TextView myNotes = (TextView)  view.findViewById(R.id.notesEventView);
+        TextView myTime = (TextView)  view.findViewById(R.id.timeEventView);
+        TextView myDate = (TextView)  view.findViewById(R.id.date);
+       // Button btnRemove = view.findViewById(R.id.btnRemove);
+
+        myTitle.setText(itemPosicao.getTitle());
+        myNotes.setText(itemPosicao.getNota());
+        myTime.setText(itemPosicao.getHora());
+        myDate.setText(itemPosicao.getData());
+
+        return view;
     }
 }
