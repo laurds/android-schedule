@@ -31,7 +31,7 @@ public class ItemEventActivity extends AppCompatActivity {
         theEventTime = (TextView) findViewById(R.id.timeEventView);
 
         /**
-         * Acessa a intent e obtem os dados depois adiciona nos arrays
+         * Acessa a intent
          */
         Intent incomingIntent = getIntent();
         item = (Item) incomingIntent.getSerializableExtra("Item");

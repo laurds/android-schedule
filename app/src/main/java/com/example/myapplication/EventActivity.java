@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,7 +26,11 @@ public class EventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
 
-        listaItem = new ArrayList<>();
+        listaItem = PreferenceConfig.readListFromPreference(this);
+
+        if (listaItem == null)
+            listaItem = new ArrayList<Item>();
+
         //recuperar do cash
         btnGoCalendar = (Button) findViewById(R.id.btnGoCalendar);
         listView = (ListView) findViewById((R.id.listView));
@@ -43,9 +47,9 @@ public class EventActivity extends AppCompatActivity {
         item = (Item) incomingIntent.getSerializableExtra("Item");
         if(item != null){
             listaItem.add(item);
-
             //Guardar no cache
-            //ArrayAdapter<Item> adapter = new ArrayAdapter<Item>(this, android.R.layout.simple_list_item_1, listaItem);
+            PreferenceConfig.writeListInPreference(getApplicationContext(), listaItem);
+
             MyAdapter adapter = new MyAdapter(listaItem, this);
             listView.setAdapter(adapter);
         }
