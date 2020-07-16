@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,7 +32,6 @@ public class MyAdapter  extends BaseAdapter {
         this.act = act;
     }
 
-
     @Override
     public int getCount() {
         return lista.size();
@@ -44,15 +44,13 @@ public class MyAdapter  extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return 0;
+    return 0;
     }
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         final int pos = position;
-
-
         View view = act.getLayoutInflater().inflate(activity_item_event, parent, false);
         Item itemPosicao = lista.get(position);
 
@@ -63,12 +61,25 @@ public class MyAdapter  extends BaseAdapter {
         TextView myNotes = (TextView)  view.findViewById(R.id.notesEventView);
         TextView myTime = (TextView)  view.findViewById(R.id.timeEventView);
         TextView myDate = (TextView)  view.findViewById(R.id.date);
-       // Button btnRemove = view.findViewById(R.id.btnRemove);
+        Button btnRemove = view.findViewById(R.id.btnRemove);
 
         myTitle.setText(itemPosicao.getTitle());
         myNotes.setText(itemPosicao.getNota());
         myTime.setText(itemPosicao.getHora());
         myDate.setText(itemPosicao.getData());
+
+        btnRemove.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Item item = lista.get(position);
+                        lista.remove(item);
+                        MyAdapter.this.notifyDataSetChanged();
+                        PreferenceConfig.writeListInPreference(act.getBaseContext(), lista);
+                        //PreferenceConfig.deleteItemFromPreference(act.getBaseContext());
+                        Toast.makeText(act.getBaseContext(), "Item removido com sucesso!",Toast.LENGTH_SHORT).show();
+                    }
+                });
 
         return view;
     }

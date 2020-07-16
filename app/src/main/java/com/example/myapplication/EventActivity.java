@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class EventActivity extends AppCompatActivity {
@@ -21,20 +19,25 @@ public class EventActivity extends AppCompatActivity {
     private String name;
     private Item item;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
 
+        btnGoCalendar = (Button) findViewById(R.id.btnGoCalendar);
+        listView = (ListView) findViewById((R.id.listView));
+        nameUser = (TextView) findViewById(R.id.titleScreen);
+
+
+        //recuperar do cash
         listaItem = PreferenceConfig.readListFromPreference(this);
 
         if (listaItem == null)
             listaItem = new ArrayList<Item>();
 
-        //recuperar do cash
-        btnGoCalendar = (Button) findViewById(R.id.btnGoCalendar);
-        listView = (ListView) findViewById((R.id.listView));
-        nameUser = (TextView) findViewById(R.id.titleScreen);
+
 
         Intent getName = getIntent();
         name = (String) getName.getSerializableExtra("nameUser");
@@ -49,7 +52,6 @@ public class EventActivity extends AppCompatActivity {
             listaItem.add(item);
             //Guardar no cache
             PreferenceConfig.writeListInPreference(getApplicationContext(), listaItem);
-
             MyAdapter adapter = new MyAdapter(listaItem, this);
             listView.setAdapter(adapter);
         }

@@ -35,4 +35,14 @@ public class PreferenceConfig {
         ArrayList<Item> list = gson.fromJson(jsonString, type);
         return list;
     }
+
+    public static void deleteItemFromPreference(Context context){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        String item = preferences.getString(LIST_KEY, "");
+
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove("LIST_KEY");
+        editor.commit();
+        editor.apply();
+    }
 }
