@@ -7,13 +7,19 @@
     tools:context=".ItemEventActivity">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical">
+
+    <LinearLayout
         android:id="@+id/eventContent"
         android:layout_width="371dp"
         android:layout_height="170dp"
         android:layout_gravity="center"
         android:background="@drawable/rounded_event"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints"
+        android:layout_marginTop="10dp"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="16dp">
 
@@ -62,14 +68,18 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnConfirmar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="saveItem"
-        android:text="Button"
-        app:layout_constraintTop_toBottomOf="@+id/eventContent"
-        tools:layout_editor_absoluteX="150dp"
-        tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="182dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:layout_gravity="center"
+            android:onClick="saveItem"
+            android:text="@string/confirmar" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,8 +19,6 @@ public class EventActivity extends AppCompatActivity {
     private String name;
     private Item item;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
